@@ -22,16 +22,16 @@ const styles = {
     transition: 'left .1s ease-in-out'
   },
   on: {
-    background: 'green'
+    background: '#2196f3'
   },
   toggleOn: {
     left: '20px',
-    color: 'green'
+    color: '#2196f3'
   }
 };
 
-export default ({ on, onClick, onIcon, offIcon, style, labelStyle, children }) => (
-  <div style={style}>
+export default ({className, on, onClick, onIcon, offIcon, style, labelStyle, children }) => (
+  <div className={className} style={style}>
     <div style={on ? { ...styles.main, ...styles.on } : styles.main} onClick={onClick}>
       <div style={on ? { ...styles.toggle, ...styles.toggleOn } : styles.toggle }>
         { on ? onIcon : offIcon }
